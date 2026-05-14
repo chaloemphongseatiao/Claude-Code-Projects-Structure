@@ -1,0 +1,49 @@
+root = true
+
+# ตั้งค่าพื้นฐานทุกไฟล์
+[*]
+charset = utf-8
+end_of_line = crlf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# ตั้งค่าพิเศษสำหรับ C#
+[*.cs]
+indent_style = space
+indent_size = 4
+
+# จัด using
+dotnet_sort_system_directives_first = true
+dotnet_separate_import_directive_groups = true
+
+# รูปแบบปีกกา (Allman style)
+csharp_new_line_before_open_brace = all
+csharp_new_line_between_method_declaration_and_body = true
+csharp_new_line_between_type_declaration_and_body = true
+
+# การย่อหน้าในบล็อกต่าง ๆ
+csharp_indent_block_contents = true
+csharp_indent_braces = false
+csharp_indent_case_contents = true
+csharp_indent_case_contents_when_block = true
+csharp_indent_switch_labels = true
+
+# การจัด lambda / condition ยาว ๆ
+csharp_indent_labels = one_less_than_current
+csharp_new_line_between_query_expression_clauses = true
+
+# expression-bodied members (ให้เขียนสั้น ๆ ได้ แต่ไม่บังคับ)
+csharp_style_expression_bodied_methods = when_on_single_line:suggestion
+csharp_style_expression_bodied_properties = when_on_single_line:suggestion
+csharp_style_expression_bodied_accessors = when_on_single_line:suggestion
+
+# var / explicit type
+csharp_style_var_for_built_in_types = false:suggestion
+csharp_style_var_when_type_is_apparent = true:suggestion
+csharp_style_var_elsewhere = false:suggestion
+
+# this. นำหน้าหรือไม่
+dotnet_style_qualification_for_field = false:suggestion
+dotnet_style_qualification_for_property = false:suggestion
+dotnet_style_qualification_for_method = false:suggestion
+dotnet_style_qualification_for_event = false:suggestion
